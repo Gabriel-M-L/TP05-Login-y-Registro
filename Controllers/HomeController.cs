@@ -15,6 +15,26 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        if (HttpContext.Session.GetString("id") == null)
+        {
+            return RedirectToAction("Login");
+        }
+        return View();
+    }
+
+    public IActionResult VerificarSesion()
+    {
+        
+        return RedirectToAction("Login");
+    }
+
+    public IActionResult Login()
+    {
+        return View();
+    }
+
+    public IActionResult Registro()
+    {
         return View();
     }
 
