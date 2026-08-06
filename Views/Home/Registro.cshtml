@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1>crear cuenta</h1>
+    <form action="@Url.Action("Home", "RegistroUsuario")" method="post">
+        <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+        Tipo de usuario:<select name="tipoUsuario" id="tipoUsuario">
+            <option value="alumno">Alumno</option>
+            <option value="docente">Docente</option>
+            <option value="coordinador">Coordinador</option>
+            <option value="padre">Padre</option>
+        </select>
+    </form>
+</div>

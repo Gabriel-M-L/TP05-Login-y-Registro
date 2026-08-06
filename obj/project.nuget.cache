@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AKVC8malATQ=",
+  "dgSpecHash": "nQJm63JDW0c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\devandroid\\Desktop\\TP05-Martinez_Loufer\\TP05-Martinez_Loufer.csproj",
+  "projectFilePath": "C:\\Users\\devandroid\\TP05-Login-y-Registro\\TP05-Martinez_Loufer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devandroid\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512",
     "C:\\Users\\devandroid\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.3.9\\microsoft.aspnetcore.cryptography.internal.2.3.9.nupkg.sha512",

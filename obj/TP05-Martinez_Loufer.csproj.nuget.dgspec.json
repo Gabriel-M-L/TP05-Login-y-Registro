@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devandroid\\Desktop\\TP05-Martinez_Loufer\\TP05-Martinez_Loufer.csproj": {}
+    "C:\\Users\\devandroid\\TP05-Login-y-Registro\\TP05-Martinez_Loufer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devandroid\\Desktop\\TP05-Martinez_Loufer\\TP05-Martinez_Loufer.csproj": {
+    "C:\\Users\\devandroid\\TP05-Login-y-Registro\\TP05-Martinez_Loufer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devandroid\\Desktop\\TP05-Martinez_Loufer\\TP05-Martinez_Loufer.csproj",
+        "projectUniqueName": "C:\\Users\\devandroid\\TP05-Login-y-Registro\\TP05-Martinez_Loufer.csproj",
         "projectName": "TP05-Martinez_Loufer",
-        "projectPath": "C:\\Users\\devandroid\\Desktop\\TP05-Martinez_Loufer\\TP05-Martinez_Loufer.csproj",
+        "projectPath": "C:\\Users\\devandroid\\TP05-Login-y-Registro\\TP05-Martinez_Loufer.csproj",
         "packagesPath": "C:\\Users\\devandroid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devandroid\\Desktop\\TP05-Martinez_Loufer\\obj\\",
+        "outputPath": "C:\\Users\\devandroid\\TP05-Login-y-Registro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,27 @@
-﻿@{
+﻿@model TP05_Martinez_Loufer.Models.Usuario
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center">       
+    <h1 class="display-4">Bienvenido, @ViewBag.usuario.Nombre!</h1>
+    <p>Has iniciado sesión como <strong>@ViewBag.usuario.NombreUsuario</strong>.</p>
+</div>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Detalles del usuario
+            </div>
+            <div class="card-body">
+                <p><strong>Nombre:</strong> @ViewBag.usuario.Nombre</p>
+                <p><strong>Apellido:</strong> @ViewBag.usuario.Apellido</p>
+                <p><strong>Nombre de usuario:</strong> @ViewBag.usuario.NombreUsuario</p>
+                <p><strong>Tipo de usuario:</strong> @ViewBag.usuario.TipoUsuario</p>
+            </div>
+        </div>
+    </div>
+    <a href="@Url.Action("Logout", "Home")" class="btn btn-danger">Cerrar sesión</a>
 </div>
