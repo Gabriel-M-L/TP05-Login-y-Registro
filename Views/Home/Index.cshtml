@@ -1,27 +1,37 @@
 ﻿@model TP05_Martinez_Loufer.Models.Usuario
 
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Bienvenido";
 }
 
-<div class="text-center">       
-    <h1 class="display-4">Bienvenido, @ViewBag.usuario.Nombre!</h1>
-    <p>Has iniciado sesión como <strong>@ViewBag.usuario.NombreUsuario</strong>.</p>
-</div>
+<div class="welcome-card card shadow-sm">
+    <div class="card-body text-center">
+        <h1 class="display-5 text-gradient mb-3">Bienvenido, @ViewBag.usuario.Nombre!</h1>
+        <p class="lead mb-4">Has iniciado sesión como <strong>@ViewBag.usuario.NombreUsuario</strong>.</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card border-0 bg-light shadow-sm">
+                    <div class="card-body">
+                        <h2 class="h6 text-uppercase text-secondary mb-3">Detalles del usuario</h2>
+                        <dl class="row mb-0">
+                            <dt class="col-sm-4">Nombre</dt>
+                            <dd class="col-sm-8">@ViewBag.usuario.Nombre</dd>
 
-<div class="row justify-content-center mt-4">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">
-                Detalles del usuario
-            </div>
-            <div class="card-body">
-                <p><strong>Nombre:</strong> @ViewBag.usuario.Nombre</p>
-                <p><strong>Apellido:</strong> @ViewBag.usuario.Apellido</p>
-                <p><strong>Nombre de usuario:</strong> @ViewBag.usuario.NombreUsuario</p>
-                <p><strong>Tipo de usuario:</strong> @ViewBag.usuario.TipoUsuario</p>
+                            <dt class="col-sm-4">Apellido</dt>
+                            <dd class="col-sm-8">@ViewBag.usuario.Apellido</dd>
+
+                            <dt class="col-sm-4">Usuario</dt>
+                            <dd class="col-sm-8">@ViewBag.usuario.NombreUsuario</dd>
+
+                            <dt class="col-sm-4">Tipo</dt>
+                            <dd class="col-sm-8">@ViewBag.usuario.TipoUsuario</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="@Url.Action("Logout", "Home")" class="btn btn-danger btn-lg">Cerrar sesión</a>
+                </div>
             </div>
         </div>
     </div>
-    <a href="@Url.Action("Logout", "Home")" class="btn btn-danger">Cerrar sesión</a>
 </div>
