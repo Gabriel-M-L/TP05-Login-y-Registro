@@ -3,17 +3,20 @@
 }
 
 <div class="text-center">
-    <h1>crear cuenta</h1>
-    <form action="@Url.Action("Home", "RegistroUsuario")" method="post">
+    <h1>Crear cuenta</h1>
+    <p>@ViewBag.MensajeError</p>
+    <form action="@Url.Action("RegistroUsuario", "Home")" method="post" onsubmit="return VerificarRegistro()">
         <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
         <input type="password" name="password" id="password" placeholder="Contraseña">
         <input type="text" name="nombre" id="nombre" placeholder="Nombre">
         <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-        Tipo de usuario:<select name="tipoUsuario" id="tipoUsuario">
+        Tipo de usuario:<select name="tipoUsuario" id="tipoUsuario" required>
             <option value="alumno">Alumno</option>
             <option value="docente">Docente</option>
             <option value="coordinador">Coordinador</option>
             <option value="padre">Padre</option>
         </select>
+        <input type="submit" value="Crear cuenta">
     </form>
+    <p id = "error"></p>
 </div>

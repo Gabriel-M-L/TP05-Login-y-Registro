@@ -4,14 +4,15 @@ using Dapper;
 public class BD
 {
     private string _connectionString =
-        @"Server=localhost; DataBase= ??? ; Integrated Security=True; TrustServerCertificate=True;";
+        @"Server=localhost; DataBase=MiPagina ; Integrated Security=True; TrustServerCertificate=True;";
 
     public int ValidarUsuario(string nombreUsuario, string password)
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
+            int id = 0;
             string query = "SELECT Id FROM Usuarios WHERE NombreUsuario = @nombreUsuario AND Password = @password";
-            int id = connection.QueryFirstOrDefault<int>(query, new { nombreUsuario, password });
+            id = connection.QueryFirstOrDefault<int>(query, new { nombreUsuario, password });
             return id;
         }
     }

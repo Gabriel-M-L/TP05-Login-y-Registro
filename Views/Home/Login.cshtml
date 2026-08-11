@@ -3,11 +3,12 @@
 }
 
 <div class="text-center">
-    <form action="@Url.Action("Home", "VerificarSesion")" method="post">
+    <p>@ViewBag.MensajeError</p>
+    <form action="@Url.Action("VerificarSesion", "Home")" method="post" onsubmit="return VerificarSesion()">
         <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
         <input type="password" name="password" id="password" placeholder="Contraseña">
-        <input type="button" value="Iniciar sesión" onclick="VerificarSesion()">
+        <input type="submit" value="Iniciar sesión">
     </form>
     <p id = "error"></p>
-    No tenes cuanta? <a href="@Url.Action("Home", "Registro")">Crea una cuenta aca</a>
+    No tenes cuanta? <a href="@Url.Action("Registro", "Home")">Crea una cuenta aca</a>
 </div>

@@ -19,9 +19,6 @@ public class HomeController : Controller
         if (HttpContext.Session.GetString("id") == null)
         {
             return RedirectToAction("Login");
-        
-
-
         }
         int id = int.Parse(HttpContext.Session.GetString("id"));
         BD bd = new BD();
@@ -40,7 +37,7 @@ public class HomeController : Controller
         {
             return RedirectToAction("Login");
         }
-        return RedirectToAction("Registro");
+        return RedirectToAction("Registro", new { mensajeError = "Ese usuario ya existe" });
     }
     [HttpPost]
     public IActionResult VerificarSesion(string nombreUsuario, string password)
@@ -49,19 +46,21 @@ public class HomeController : Controller
         int id = bd.ValidarUsuario(nombreUsuario, password);
         if (id == 0)
         {
-           return RedirectToAction("Login"); 
+           return RedirectToAction("Login", new { mensajeError = "Usuario o contraseña incorrectos" }); 
         }
         HttpContext.Session.SetString("id", id.ToString());
         return RedirectToAction("Index");
     }
 
-    public IActionResult Login()
+    public IActionResult Login(string mensajeError)
     {
+        ViewBag.MensajeError = mensajeError;
         return View();
     }
 
-    public IActionResult Registro()
+    public IActionResult Registro(string mensajeError)
     {
+        ViewBag.MensajeError = mensajeError;
         return View();
     }
 
