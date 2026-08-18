@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Recuperar Contraseña";
+}
+
+<div class="login-card card shadow-sm">
+    <div class="card-body">
+        <h1 class="h3 text-center text-gradient mb-4">Recuperar Contraseña</h1>
+        <div class="alert alert-warning">@ViewBag.MensajeError</div>
+        <form action="@Url.Action("EnviarLinkRecuperacion", "Home")" method="post">
+            <div class="mb-3">
+                <p class="form-label">Email</p>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Ingresa tu email" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Recuperar Contraseña</button>
+        </form>
+        <p class="text-center mt-3 mb-0"><a href="@Url.Action("Login", "Home")">Volver a Iniciar sesión</a></p>
+    </div>
+</div>

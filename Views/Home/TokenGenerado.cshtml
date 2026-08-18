@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Token Generado";
+}
+
+<div class="login-card card shadow-sm">
+    <div class="card-body">
+        <h1 class="h3 text-center text-gradient mb-4">Token Generado</h1>
+        <div class="alert alert-success">
+            <p><strong>¡Éxito!</strong> Se ha generado un token para recuperar tu contraseña.</p>
+            <p>El token expira en 30 minutos.</p>
+        </div>
+        <div class="alert alert-secondary">
+            <p>Haz clic en el enlace de abajo para cambiar tu contraseña:</p>
+            <a href="@ViewBag.EnlaceRecuperacion" class="btn btn-primary">Cambiar Contraseña</a>
+        </div>
+        <p class="text-center mt-3 mb-0"><a href="@Url.Action("Login", "Home")">Volver a Iniciar sesión</a></p>
+    </div>
+</div>

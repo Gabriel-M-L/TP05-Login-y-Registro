@@ -63,3 +63,44 @@ function VerificarRegistro() {
     }
     return true;
 }
+function ValidarContrasenas() {
+    /* la siguiente validacion se deberia hacer en javascript en lugar de en el controller: if (nuevoPassword != confirmarPassword)
+        {
+            ViewBag.UsuarioId = usuarioId;
+            ViewBag.MensajeError = "Las contraseñas no coinciden";
+            return View();
+        }
+      valida que la contraseña tenga almenos 8 caracteres
+    */
+    var nuevoPassword = document.getElementById("nuevoPassword").value;
+    var confirmarPassword = document.getElementById("confirmarPassword").value;
+    var errorDiv = document.getElementById("errorPassword");
+    var cuentaError = 0;
+    errorDiv.innerHTML = "";
+
+    if (nuevoPassword.length < 8) {
+        errorDiv.innerHTML += "\nLa contraseña debe tener al menos 8 caracteres.";
+        errorDiv.style.color = "red";
+        cuentaError++;
+    }
+
+    if (confirmarPassword.length < 8) {
+        errorDiv.innerHTML += "\nLa confirmación de contraseña debe tener al menos 8 caracteres.";
+        errorDiv.style.color = "red";
+        cuentaError++;
+    }
+
+    if (nuevoPassword !== confirmarPassword) {
+        errorDiv.innerHTML += "\nLas contraseñas no coinciden.";
+        errorDiv.style.color = "red";
+        cuentaError++;
+    }
+
+    if (cuentaError > 0) {
+        errorDiv.style.display = "block";
+        return false;
+    }
+
+    errorDiv.style.display = "none";
+    return true;
+}
